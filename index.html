@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>INNOVEX 2K26 | National Level Technical Symposium</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <style>
+    /* ================= GLOBAL STYLES ================= */
+    body {
+      font-family: 'Poppins', sans-serif;
+      min-height: 100vh;
+      background: linear-gradient(180deg, #2b0040 0%, #3b0066 50%, #2b0040 100%);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      color: #fff;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    /* Star Background */
+    #stars {
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      pointer-events: none;
+      overflow: hidden;
+      background: transparent;
+    }
+
+    .star {
+      position: absolute;
+      background: radial-gradient(circle, #ffffff, #9ffcff);
+      border-radius: 50%;
+      opacity: 0.9;
+      box-shadow: 0 0 6px #9ffcff;
+      animation: twinkle linear infinite;
+    }
+
+    @keyframes twinkle {
+      from { opacity: 0.3; }
+      to { opacity: 1; }
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    section {
+      padding: 80px 0;
+    }
+
+    .neon-text {
+      text-shadow: 0 0 5px #0ff, 0 0 15px #0ff, 0 0 30px #7ff;
+      color: #c8ffff;
+    }
+
+    .btn-neon {
+      background: linear-gradient(45deg, #00f5ff, #7f00ff);
+      border: none;
+      color: #fff;
+      padding: 12px 30px;
+      border-radius: 30px;
+      font-weight: 600;
+      transition: 0.3s;
+      box-shadow: 0 0 15px rgba(0,255,255,0.6);
+    }
+
+    .btn-neon:hover {
+      transform: scale(1.08);
+      letter-spacing: 1px;
+      box-shadow: 0 0 35px rgba(0,255,255,1);
+    }
+
+    /* ================= SECTION TITLES ================= */
+    h2.neon-text {
+      position: relative;
+      display: inline-block;
+      padding-bottom: 10px;
+    }
+
+    h2.neon-text::after {
+      content: "";
+      position: absolute;
+      width: 60%;
+      height: 3px;
+      background: linear-gradient(90deg, #00f5ff, #7f00ff);
+      left: 20%;
+      bottom: 0;
+      border-radius: 5px;
+      box-shadow: 0 0 10px #0ff;
+    }
+
+    /* Section Spacing */
+    section {
+      padding: 100px 0;
+    }
+
+    /* ================= NAVBAR ================= */
+    .navbar {
+      background: rgba(0,0,0,0.7);
+      backdrop-filter: blur(10px);
+    }
+
+    .navbar-brand {
+      font-family: 'Orbitron';
+      color: #0ff !important;
+    }
+
+    .nav-link {
+      color: #fff !important;
+      margin-right: 15px;
+    }
+
+    .nav-link:hover {
+      color: #0ff !important;
+    }
+
+    /* ================= HERO ================= */
+    #hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background: url('https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=1950&q=80') repeat-x;
+      background-size: cover;
+      position: relative;
+      animation: galaxyMove 60s linear infinite;
+    }
+
+    /* Galaxy Animation */
+    @keyframes galaxyMove {
+      from {
+        background-position: 0 0;
+      }
+      to {
+        background-position: -3000px 0;
+      }
+    }
+
+    #hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(5,0,20,0.85);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+    }
+
+    .hero-logo {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      z-index: 3;
+    }
+
+    .hero-logo img {
+      width: 70px;
+    }
+
+    /* ================= CARDS ================= */
+    .glass-card {
+      background: linear-gradient(145deg, rgba(255,255,255,0.12), rgba(255,255,255,0.02));
+      backdrop-filter: blur(15px);
+      border-radius: 20px;
+      padding: 30px;
+      text-align: center;
+      transition: all 0.4s ease;
+      height: 100%;
+      box-shadow: 0 0 25px rgba(0,255,255,0.25);
+    }
+
+    .glass-card:hover {
+      transform: translateY(-12px) scale(1.02);
+      box-shadow: 0 0 40px rgba(0,255,255,0.8);
+    }
+
+    .glass-card i {
+      font-size: 40px;
+      color: #0ff;
+      margin-bottom: 15px;
+    }
+
+    /* ================= TIMELINE ================= */
+    .timeline {
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .timeline-item {
+      background: rgba(255,255,255,0.07);
+      padding: 15px 25px;
+      border-left: 4px solid #0ff;
+      margin-bottom: 20px;
+      border-radius: 10px;
+    }
+
+    /* ================= SOCIAL ================= */
+    .social-icons a {
+      font-size: 25px;
+      margin: 0 15px;
+      color: #0ff;
+      transition: 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #fff;
+      text-shadow: 0 0 15px #0ff;
+    }
+
+    /* ================= FOOTER ================= */
+    footer {
+      background: #02000a;
+      padding: 25px 0;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    /* ================= RESPONSIVE ================= */
+    @media(max-width:768px){
+      #hero h1{font-size:32px;}
+      .hero-logo img{width:55px;}
+    }
+  </style>
+</head>
+<body>
+
+<!-- Star Particles Background -->
+<div id="stars"></div>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="#hero">
+        <img src="logo.png" alt="Logo" style="width:30px;height:auto;margin-right:8px;">
+        <span>Vivekanandha Arts And Science College
+           For Women, Sankagiri.</span>
+      </a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#tech">Tech</a></li>
+        <li class="nav-item"><a class="nav-link" href="#nontech">Non-Tech</a></li>
+        <li class="nav-item"><a class="nav-link" href="#schedule">Schedule</a></li>
+        <li class="nav-item"><a class="nav-link" href="#register">Register</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<section id="hero">
+
+ 
+  <div class="container hero-content">
+    <h1 class="display-4 neon-text fw-bold">INNOVEX 2K26</h1>
+    <h4 class="mb-3">National Level Technical Symposium</h4>
+
+    <p class="mb-3">
+      📅 February 16 | ⏰ 10:00 AM – 04:00 PM | 📍 Mini Hall
+    </p>
+
+    <!-- Countdown Timer -->
+    <div id="countdown" class="mb-3 fw-bold text-info"></div>
+
+    <a href="#register" class="btn btn-neon mt-3">Register Now</a>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section id="about">
+  <div class="container">
+    <h2 class="text-center neon-text mb-4">About INNOVEX 2K26</h2>
+
+    <p class="text-center w-75 mx-auto">
+      INNOVEX 2K26 is a National Level Technical Symposium organized by the
+      Department of Computer Science & Applications, Vivekanandha Arts and Science College for Women.
+      The event promotes innovation, creativity, technology, and collaboration among young minds.
+    </p>
+  </div>
+</section>
+
+<!-- ================= TECHNICAL EVENTS ================= -->
+<section id="tech" class="bg-dark">
+  <div class="container">
+    <h2 class="text-center neon-text mb-5">Technical Events</h2>
+
+    <!-- First Row -->
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="glass-card">
+          <i class="fas fa-brain"></i>
+          <h5>Mind Matrix</h5>
+          <p>Technical quiz & logical thinking</p>
+          <button class="btn btn-sm btn-neon mt-2"
+            data-title="Mind Matrix"
+            data-rules="Teams of 2 members.
+Multiple choice and buzzer rounds included.
+Tie-breaker will be conducted if required.
+Judges' decision is final."
+            onclick="showRules(this.dataset.title, this.dataset.rules)">
+            View Rules
+          </button>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="glass-card">
+          <i class="fas fa-code"></i>
+          <h5>Patch Pulse</h5>
+          <p>Debugging & coding challenge</p>
+          <button class="btn btn-sm btn-neon mt-2"
+            data-title="Patch Pulse"
+            data-rules="Teams of 2 Participation.
+Use of internet is strictly prohibited.
+Judging is based on number of bugs fixed and time taken.
+Plagiarism or code copying will lead to disqualification.
+Judges' decision is final."
+            onclick="showRules(this.dataset.title, this.dataset.rules)">
+            View Rules
+          </button>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="glass-card">
+          <i class="fas fa-palette"></i>
+          <h5>Visual Vibes</h5>
+          <p>Poster / UI design challenge</p>
+          <button class="btn btn-sm btn-neon mt-2"
+            data-title="Visual Vibes"
+            data-rules="Individual or team of 1 participant.
+Theme will be given on the spot.
+Using Canva and other tools.
+Time limit: 1.30 hour.
+Judged based on creativity, message clarity, and visual appeal."
+            onclick="showRules(this.dataset.title, this.dataset.rules)">
+            View Rules
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second Row -->
+    <div class="row g-4 mt-3">
+      <div class="col-md-4">
+        <div class="glass-card">
+          <i class="fas fa-lightbulb"></i>
+          <h5>Idea Storm</h5>
+          <p>Innovative idea presentation</p>
+          <button class="btn btn-sm btn-neon mt-2"
+            data-title="Idea Storm"
+            data-rules="Teams of 2 Participation.
+Present your idea in PPT.
+Present in Tamil or English.
+Idea should be neatly presented.
+Judges' decision is final."
+            onclick="showRules(this.dataset.title, this.dataset.rules)">
+            View Rules
+          </button>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="glass-card">
+          <i class="fas fa-icons"></i>
+          <h5>Iconify</h5>
+          <p>Logo & icon design</p>
+          <button class="btn btn-sm btn-neon mt-2"
+            data-title="Iconify"
+            data-rules="Teams of 2 members.
+Each question has 15 seconds.
+Tie-breaker will be conducted if required.
+Don’t use any other tools.
+Judges' decision is final."
+            onclick="showRules(this.dataset.title, this.dataset.rules)">
+            View Rules
+          </button>
+        </div>
+      </div>
+
+      <!-- Empty Column to balance row -->
+      <div class="col-md-4"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= NON-TECHNICAL EVENTS ================= -->
+<section id="nontech">
+  <div class="container">
+    <h2 class="text-center neon-text mb-5">Non-Technical Events</h2>
+
+    <!-- First Row -->
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="glass-card">
+          <i class="fas fa-question"></i>
+          <h5>The Hidden Path</h5>
+          <p>Treasure Hunt</p>
+          <button class="btn btn-sm btn-neon mt-2"
+            data-title="The Hidden Path"
+            data-rules="Teams of 3 to 5 members.
+Don’t break anything.
+Team members should not be divided.
+Find the first clue and proceed to next clue.
+Time will be limited."
+            onclick="showRules(this.dataset.title, this.dataset.rules)">
+            View Rules
+          </button>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="glass-card">
+          <i class="fas fa-music"></i>
+          <h5>Rhythmix</h5>
+          <p>Spotify Vibe</p>
+          <button class="btn btn-sm btn-neon mt-2"
+            data-title="Rhythmix"
+            data-rules="Teams of 2 members.
+Don’t use mobile phones.
+Time will be limited."
+            onclick="showRules(this.dataset.title, this.dataset.rules)">
+            View Rules
+          </button>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="glass-card">
+          <i class="fas fa-network-wired"></i>
+          <h5>Sync Node</h5>
+          <p>Connection</p>
+          <button class="btn btn-sm btn-neon mt-2"
+            data-title="Sync Node"
+            data-rules="Teams of 2 members.
+No verbal clues or lip movement allowed.
+Time will be limited.
+Team with the most correct guesses wins."
+            onclick="showRules(this.dataset.title, this.dataset.rules)">
+            View Rules
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second Row -->
+    <div class="row g-4 mt-3">
+      <div class="col-md-4">
+        <div class="glass-card">
+          <i class="fas fa-person-running"></i>
+          <h5>Kinetic Flow</h5>
+          <p>Dance</p>
+          <button class="btn btn-sm btn-neon mt-2"
+            data-title="Kinetic Flow"
+            data-rules="Dance (Solo & Group):
+Team size: Minimum 4 and maximum 10 participants.
+Time limit: 4 to 6 minutes (including entry and exit).
+Only non-obscene, decent music and lyrics allowed.
+Props allowed but must be handled by team only.
+Judging based on coordination, choreography, costumes, expression, and energy.
+No fire, water, or sharp objects allowed on stage.
+Negative marking for exceeding time or inappropriate behaviour.
+All teams must report 30 minutes before the event.
+Decision of the judges is final and binding.
+Music track must be submitted in advance (pen drive, mail, or WhatsApp).
+Both Solo & Group dances are judged separately."
+            onclick="showRules(this.dataset.title, this.dataset.rules)">
+            View Rules
+          </button>
+        </div>
+      </div>
+
+      <!-- Empty columns to balance row -->
+      <div class="col-md-4"></div>
+      <div class="col-md-4"></div>
+    </div>
+  </div>
+</section>
+<!-- ================= SCHEDULE ================= -->
+<section id="schedule" class="bg-dark">
+  <div class="container">
+    <h2 class="text-center neon-text mb-5">Event Schedule</h2>
+
+    <div class="timeline">
+      <div class="timeline-item">10:00 AM – Inauguration</div>
+      <div class="timeline-item">10:30 AM – Technical Events</div>
+      <div class="timeline-item">01:00 PM – Lunch Break</div>
+      <div class="timeline-item">02:00 PM – Non-Technical Events</div>
+      <div class="timeline-item">04:00 PM – Valedictory & Prizes</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= REGISTER ================= -->
+<section id="register">
+  <div class="container text-center">
+    <h2 class="neon-text mb-4">Registration</h2>
+
+    <p>Registration Fee: <strong>₹200</strong></p>
+    <p>Exciting prizes for winners 🎉</p>
+
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSebb6SxaE9u4k4prVbmML3MDnOGO1U5kfM_lCtDuDdHWPLZ2A/viewform" target="_blank" class="btn btn-neon">
+      Register via Google Form
+    </a>
+  </div>
+</section>
+
+<!-- ================= COMMITTEE ================= -->
+<section id="committee" class="bg-dark">
+  <div class="container">
+    <h2 class="text-center neon-text mb-5">Organizing Committee</h2>
+
+    <div class="row justify-content-center g-4">
+
+      <!-- HOD -->
+      <div class="col-md-3 col-sm-6">
+        <div class="glass-card">
+          <img src="uma.jpg" alt="Mrs. J. Uma"
+            style="width:100px;height:100px;object-fit:cover;border-radius:50%;
+            margin-bottom:15px;box-shadow:0 0 15px #0ff;">
+          <h6>Mrs. J. Uma</h6>
+          <p>Head of Department</p>
+        </div>
+      </div>
+
+      <!-- IQAC -->
+      <div class="col-md-3 col-sm-6">
+        <div class="glass-card">
+          <img src="director.jpg" alt="Dr. B. T. Suresh Kumar"
+            style="width:100px;height:100px;object-fit:cover;border-radius:50%;
+            margin-bottom:15px;box-shadow:0 0 15px #0ff;">
+          <h6>Dr. B. T. Suresh Kumar</h6>
+          <p>Director, IQAC</p>
+        </div>
+      </div>
+
+      <!-- Principal -->
+      <div class="col-md-3 col-sm-6">
+        <div class="glass-card">
+          <img src="principal.jpg" alt="Dr. V. Padmanabhan"
+            style="width:100px;height:100px;object-fit:cover;border-radius:50%;
+            margin-bottom:15px;box-shadow:0 0 15px #0ff;">
+          <h6>Dr. V. Padmanabhan</h6>
+          <p>Principal</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= SOCIAL ================= -->
+<section id="social">
+  <div class="container text-center">
+    <h2 class="neon-text mb-4">Connect With Us</h2>
+
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/in/department-of-computer-science-and-applications-a203533a9" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.instagram.com/viaas_computersciencedept" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="bg-dark">
+  <div class="container text-center">
+    <h2 class="neon-text mb-4">Contact & Location</h2>
+
+    <p>
+      Vivekanandha Arts and Science College for Women<br>
+      Veerachipalayam, Sankagiri, Salem – 637303<br>
+      Tamil Nadu, India
+    </p>
+
+    <p>Email: computersciencedept@viaasrtt.ac.in | Phone: +91 99420 13824 , +91 96881 67247
+    </p>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <p>
+    Vivekanandha Arts and Science College for Women<br>
+    Department of Computer Science & Applications<br>
+    © INNOVEX 2K26
+  </p>
+</footer>
+
+<!-- Rules Modal -->
+<div class="modal fade" id="rulesModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content bg-dark text-white">
+      <div class="modal-header">
+        <h5 class="modal-title" id="rulesTitle"></h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body" id="rulesBody"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom JS -->
+<script>
+  // Navbar close on mobile click
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      document.querySelector('.navbar-collapse').classList.remove('show');
+    });
+  });
+
+  // Countdown Timer
+  const eventDate = new Date("February 16, 2026 10:00:00").getTime();
+
+  const timer = setInterval(() => {
+    const now = new Date().getTime();
+    const diff = eventDate - now;
+
+    if (diff < 0) {
+      clearInterval(timer);
+      document.getElementById("countdown").innerHTML = "🎉 Event Started!";
+      return;
+    }
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+    document.getElementById("countdown").innerHTML =
+      `⏳ ${days}d ${hours}h ${minutes}m ${seconds}s Left`;
+  }, 1000);
+
+  // Star Generator
+  const starsContainer = document.getElementById("stars");
+  const starCount = 150;
+
+  for (let i = 0; i < starCount; i++) {
+    const star = document.createElement("div");
+    star.classList.add("star");
+
+    const size = Math.random() * 2 + 1;
+    star.style.width = size + "px";
+    star.style.height = size + "px";
+
+    star.style.top = Math.random() * 100 + "%";
+    star.style.left = Math.random() * 100 + "%";
+
+    star.style.animationDuration = (Math.random() * 3 + 2) + "s";
+
+    starsContainer.appendChild(star);
+  }
+
+  // Show Rules Popup
+  function showRules(title, rules) {
+    document.getElementById("rulesTitle").innerText = title + " - Rules";
+    document.getElementById("rulesBody").innerText = rules;
+
+    const modal = new bootstrap.Modal(document.getElementById('rulesModal'));
+    modal.show();
+  }
+</script>
+
+</body>
+</html>
