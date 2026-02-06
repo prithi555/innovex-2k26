@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>International Conference 2026 | Vivekanandha Arts And Science College For Women,Sankagiri.</title>
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Poppins&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+<style>
+
+/* Global */
+body{
+font-family:Poppins,sans-serif;
+background:linear-gradient(180deg,#2b0040,#3b0066,#2b0040);
+color:white;
+overflow-x:hidden;
+}
+
+h1,h2,h3,h4{ font-family:Orbitron; }
+
+section{ padding:100px 0; }
+
+.neon-text{
+color:#c8ffff;
+text-shadow:0 0 10px #0ff;
+}
+
+.btn-neon{
+background:linear-gradient(45deg,#00f5ff,#7f00ff);
+border:none;
+color:white;
+padding:12px 28px;
+border-radius:30px;
+box-shadow:0 0 15px #0ff;
+}
+
+/* Navbar */
+.navbar{
+background:rgba(0,0,0,0.8);
+backdrop-filter:blur(10px);
+}
+
+/* Hero */
+#hero{
+min-height:100vh;
+background:url('https://images.unsplash.com/photo-1446776811953-b23d57bd21aa') center/cover;
+position:relative;
+display:flex;
+align-items:center;
+}
+
+#hero::after{
+content:"";
+position:absolute;
+inset:0;
+background:rgba(0,0,20,0.85);
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+text-align:center;
+}
+
+/* Cards */
+.glass-card{
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(15px);
+border-radius:20px;
+padding:30px;
+text-align:center;
+box-shadow:0 0 20px #0ff;
+transition:0.3s;
+height:100%;
+}
+
+.glass-card:hover{
+transform:translateY(-10px);
+}
+
+/* Timeline */
+.timeline{
+max-width:700px;
+margin:auto;
+}
+
+.timeline-item{
+background:rgba(255,255,255,0.07);
+padding:15px;
+border-left:4px solid #0ff;
+margin-bottom:15px;
+border-radius:10px;
+}
+
+/* Digital Countdown */
+.countdown-wrapper{
+display:flex;
+justify-content:center;
+gap:15px;
+margin-top:25px;
+flex-wrap:wrap;
+}
+
+.time-box{
+background:rgba(0,255,255,0.15);
+border:2px solid #00ffff;
+box-shadow:0 0 15px #0ff;
+border-radius:12px;
+padding:12px 18px;
+min-width:75px;
+text-align:center;
+animation:glow 1.5s infinite alternate;
+}
+
+.time-box span{
+display:block;
+font-size:24px;
+font-weight:bold;
+color:#00ffff;
+font-family:Orbitron;
+}
+
+.time-box small{
+font-size:12px;
+color:#fff;
+letter-spacing:1px;
+}
+
+/* Glow Animation */
+@keyframes glow{
+from{ box-shadow:0 0 10px #0ff; }
+to{ box-shadow:0 0 25px #0ff,0 0 40px #7f00ff; }
+}
+
+/* Footer */
+footer{
+background:#02000a;
+text-align:center;
+padding:25px;
+font-size:14px;
+}
+
+/* Responsive */
+@media(max-width:768px){
+#hero h1{font-size:30px;}
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top">
+<div class="container">
+
+<a class="navbar-brand d-flex align-items-center text-info fw-bold" href="#">
+<img src="logo.png" width="40" height="40" class="me-2">
+Vivekanandha Arts And Science<br>
+College For Women, Sankagiri.
+</a>
+
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="menu">
+<ul class="navbar-nav ms-auto">
+
+<li class="nav-item"><a class="nav-link text-white" href="#about">About</a></li>
+<li class="nav-item"><a class="nav-link text-white" href="#speakers">Speakers</a></li>
+<li class="nav-item"><a class="nav-link text-white" href="#schedule">Schedule</a></li>
+<li class="nav-item"><a class="nav-link text-white" href="#contact">Contact</a></li>
+
+</ul>
+</div>
+</div>
+</nav>
+
+<!-- Hero -->
+<section id="hero">
+<div class="container hero-content">
+
+<h1 class="display-4 neon-text fw-bold">International Conference</h1>
+
+<h4 class="mb-3">
+Recent Advances in Interdisciplinary Data-Centric Computing and Communication Technologies
+</h4>
+
+<p>📅 February 17 | ⏰ 10:00 AM – 04:00 PM | 📍 Srinivasa Mini Hall</p>
+
+<!-- Countdown -->
+<div id="countdown" class="countdown-wrapper">
+
+<div class="time-box">
+<span id="days">00</span>
+<small>DAYS</small>
+</div>
+
+<div class="time-box">
+<span id="hours">00</span>
+<small>HRS</small>
+</div>
+
+<div class="time-box">
+<span id="minutes">00</span>
+<small>MIN</small>
+</div>
+
+<div class="time-box">
+<span id="seconds">00</span>
+<small>SEC</small>
+</div>
+
+</div>
+
+<a href="https://forms.gle/qnRPZi1Q9PKjsL5B9" target="_blank" class="btn btn-neon mt-4">
+Register Now
+</a>
+
+</div>
+</section>
+
+<!-- About -->
+<section id="about">
+<div class="container">
+
+<h2 class="text-center neon-text mb-4">About Conference</h2>
+
+<p class="text-center w-75 mx-auto">
+The International Conference on Recent Advances in Interdisciplinary Data-Centric Computing and Communication Technologies is organized by the Department of Computer Science & Applications, Vivekanandha Arts and Science College for Women, Sankagiri.
+</p>
+
+</div>
+</section>
+
+<!-- Speakers -->
+<section id="speakers" class="bg-dark">
+<div class="container">
+
+<h2 class="text-center neon-text mb-5">Keynote Speakers</h2>
+
+<div class="row g-4 justify-content-center">
+
+<!-- Speaker 1 -->
+<div class="col-md-4 col-sm-6">
+<div class="glass-card">
+
+<img src="speaker1.jpg" width="120" height="120" style="border-radius:50%;box-shadow:0 0 15px #0ff;">
+
+<h6 class="mt-3">Dr. ASADI SRINIVASULU</h6>
+<p>Visiting Researcher<br>
+University of Newcastle<br>
+Australia</p>
+
+</div>
+</div>
+
+<!-- Speaker 2 -->
+<div class="col-md-4 col-sm-6">
+<div class="glass-card">
+
+<img src="speaker2.jpg" width="120" height="120" style="border-radius:50%;box-shadow:0 0 15px #0ff;">
+
+<h6 class="mt-3">Mr. SHANTHABABU PANDIAN</h6>
+<p>Data and AI Solution Architect<br>
+London</p>
+
+</div>
+</div>
+
+<!-- Speaker 3 -->
+<div class="col-md-4 col-sm-6">
+<div class="glass-card">
+
+<img src="speaker3.jpg" width="120" height="120" style="border-radius:50%;box-shadow:0 0 15px #0ff;">
+
+<h6 class="mt-3">Dr. SATHISH A.P.KUMAR</h6>
+<p>Full Professor <br>
+Department of Computer Science <br>
+Cleveland State University<br>
+USA</p>
+
+</div>
+</div>
+
+<!-- Speaker 4 -->
+<div class="col-md-4 col-sm-6">
+<div class="glass-card">
+
+<img src="speaker4.jpg" width="100" height="90" style="border-radius:50%;box-shadow:0 0 15px #0ff;">
+
+<h6 class="mt-3">Mr. JOEL PRINCE</h6>
+<p>Test Lead<br>
+Cognizant Technologies Solutions<br>
+Coimbatore</p>
+
+</div>
+</div>
+
+<!-- Speaker 5 -->
+<div class="col-md-4 col-sm-6">
+<div class="glass-card">
+
+<img src="speaker5.jpg" width="120" height="120" style="border-radius:50%;box-shadow:0 0 15px #0ff;">
+
+<h6 class="mt-3">Dr. GODDINDLA SREENIVASULU</h6>
+<p>Assitant Professor<br>
+Prathyusha Engineering College<br>
+Thiruvallur</p>
+
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- Schedule -->
+<section id="schedule">
+<div class="container">
+
+<h2 class="text-center neon-text mb-4">Conference Schedule</h2>
+
+<div class="timeline">
+
+<div class="timeline-item">10:00 AM – Inaugural</div>
+<div class="timeline-item">10:15 AM – Chief Guest Address</div>
+<div class="timeline-item">11:30 AM – Refreshment</div>
+<div class="timeline-item">12:00 PM – Presentation</div>
+<div class="timeline-item">01:30 PM – Lunch</div>
+<div class="timeline-item">03:00 PM – Valedictory</div>
+
+</div>
+</div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+<div class="container text-center">
+
+<h2 class="neon-text mb-3">Contact</h2>
+
+<p>Vivekanandha Arts and Science College for Women<br>Sankagiri – 637303</p>
+
+<p>📧 computersciencedept@viaasrtt.ac.in<br>📞 99420 13824 | 96881 67247</p>
+
+</div>
+</section>
+
+<!-- Footer -->
+<footer>
+<p>© International Conference 2026<br>Department of Computer Science and Applications</p>
+</footer>
+
+<!-- JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+
+const eventDate = new Date("February 17, 2026 10:00:00").getTime();
+
+setInterval(()=>{
+
+const now = new Date().getTime();
+const diff = eventDate - now;
+
+if(diff < 0){
+document.getElementById("countdown").innerHTML="🎉 Event Started!";
+return;
+}
+
+document.getElementById("days").innerText =
+Math.floor(diff/(1000*60*60*24));
+
+document.getElementById("hours").innerText =
+Math.floor((diff%(1000*60*60*24))/(1000*60*60));
+
+document.getElementById("minutes").innerText =
+Math.floor((diff%(1000*60*60))/(1000*60));
+
+document.getElementById("seconds").innerText =
+Math.floor((diff%(1000*60))/1000);
+
+},1000);
+
+</script>
+
+</body>
+</html>
